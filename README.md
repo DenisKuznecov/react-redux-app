@@ -1,17 +1,15 @@
 This template was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## What is it?
+## Consists of:
 
-- React template for beginners
-- Consists of:
-    - react
-    - react-dom
-    - react-router-dom v4.0.0
-    - redux
-    - redux-saga
-    - redux-thunk
-    - redux-immutable-state-invariant
-    - reset.css
+- react
+- react-dom
+- react-router-dom v4.0.0
+- redux
+- redux-saga
+- redux-thunk
+- redux-immutable-state-invariant
+- reset.css
 
 ## Requirements
 
