@@ -1,28 +1,29 @@
 const initialState = {
-    data: [],
-    dataFetched: false,
+    data: {},
     isFetching: false,
     error: false
 };
 
-export default function dataReducer(state = initialState, action) {
+export default function layoutReducer(state = initialState, action) {
+    debugger;
     switch(action.type) {
         case 'FETCHING_DATA':
             return {
                 ...state,
-                isFetching: true,
+                isFetching: true
             };
         case 'FETCHING_DATA_SUCCESS':
+            debugger;
             return {
                 ...state,
                 isFetching: false,
-                data: action.data
+                data: action.payload
             };
         case 'FETCHING_DATA_FAILURE':
             return {
                 ...state,
                 isFetching: false,
-                error: true,
+                error: action.payload,
             };
         default:
             return {...state};

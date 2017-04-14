@@ -1,0 +1,17 @@
+.user-wrap .user-info {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 15px;
+    font: 500 14px Monospace;
+}
+
+.user-wrap .user-image img {
+    border-radius: 50%;
+    border: 4px solid #ffff;
+}
+
+.user-wrap .plus-icon i {
+    font: bold 40px Monospace;
+    color: #626262;
+    cursor: pointer;
+}
