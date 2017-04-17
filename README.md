@@ -4,10 +4,9 @@ This template was bootstrapped with [Create React App](https://github.com/facebo
 
 - react
 - react-dom
-- react-router-dom v4.0.0
+- react-router
 - redux
 - redux-saga
-- redux-thunk
 - redux-immutable-state-invariant
 - reset.css
 
