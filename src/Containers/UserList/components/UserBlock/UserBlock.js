@@ -33,44 +33,39 @@ class UserBlock extends Component {
 
     render() {
         const { user } = this.props;
+        const { showAdvancedInfo } = this.state;
+        console.log(user);
         return (
-            <tr className="user-wrap">
-                {
-                    user.picture &&
-                    <td className="user-info user-image">
-                        <img src={user.picture.thumbnail} alt="user"/>
-                    </td>
-                }
-                <td className="user-info user-last-name">{user.name.last}</td>
-                <td className="user-info user-first-name">{user.name.first}</td>
-                {
-                    user.login.username &&
-                    <td className="user-info username">{user.login.username}</td>
-                }
-                {
-                    user.phone &&
-                    <td className="user-info user-phone">{user.phone}</td>
-                }
-                {
-                    user.location &&
-                    <td className="user-info user-lacation">
-                        {this.handleUserLocation(user.location)}
-                    </td>
-                }
-                <td className="user-info plus-icon">
+            <div className="user-block-wrap">
+                <img className="user-image" src={user.picture.medium} alt="user-picture"/>
+                <div className="user-info">
+                    <h4 className="user-name">
+                        {`${user.name.first} ${user.name.last}`}
+                    </h4>
+                    <p className="user-username">
+                        {user.login.username}
+                    </p>
+                    <p className="user-phone">
+                        {user.phone}
+                    </p>
+                    <p className="user-state">
+                        {user.location.state}
+                    </p>
+                </div>
+                <div className="user-controls">
                     {
-                        this.state.showAdvancedInfo ?
+                        showAdvancedInfo ?
                             <i onClick={this.toggleAdvanced.bind(this)}>-</i> :
                             <i onClick={this.toggleAdvanced.bind(this)}>+</i>
                     }
-                </td>
+                </div>
                 {
-                    this.state.showAdvancedInfo &&
+                    showAdvancedInfo &&
                     <AdvancedInfo
                         user={user}
                     />
                 }
-            </tr>
+            </div>
         );
     }
 }

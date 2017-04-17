@@ -1,0 +1,44 @@
+.user-block-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #c2c2c2;
+    padding: 10px;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.user-image {
+    width: 72px;
+    height: 72px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.user-info .user-name {
+    font-size: 24px;
+    text-transform: capitalize;
+    margin: 0;
+    padding-bottom: 5px;
+}
+.user-info .user-username {
+    color: rgba(66,66,66, .6);
+    padding-bottom: 5px;
+    font-size: 12px;
+}
+.user-info .user-phone {
+    padding-bottom: 5px;
+}
+.user-info .user-phone,
+.user-info .user-state {
+    font-size: 14px;
+}
+.user-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.user-controls i {
+    cursor: pointer;
+    font: 400 40px 'Montserrat';
+    color: #c2c2c2;
+}

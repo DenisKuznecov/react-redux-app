@@ -3,17 +3,21 @@ import request from '../../Utils/Api';
 
 function* takeUsers() {
     while (true) {
-        debugger;
         const { amount } = yield take('FETCHING_DATA');
-        debugger;
-        const { data } = yield call(
+        const response  = yield call(
             request, `https://randomuser.me/api/?results=${amount}`, 'GET',
         );
-        debugger;
-        yield put({
-            type: 'FETCHING_DATA_SUCCESS',
-            payload: data,
-        });
+        if (!response.error) {
+            yield put({
+                type: 'FETCHING_DATA_SUCCESS',
+                payload: response.results,
+            });
+        } else {
+            yield put({
+                type: 'FETCHING_DATA_FAIL',
+                payload: response.error,
+            });
+        }
     }
 }
 

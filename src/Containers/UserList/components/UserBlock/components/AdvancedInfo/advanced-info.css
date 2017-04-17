@@ -1,0 +1,26 @@
+.advanced-info-wrap {
+    width: 100%;
+}
+
+.advanced-name {
+    margin-top: 15px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+.large-image {
+    margin: 10px 0 15px;
+}
+
+.advanced-list-item {
+    margin-bottom: 15px;
+}
+
+.info-list-item span {
+    font-size: 14px;
+}
+
+.info-list-item span:first-of-type {
+    color: rgba(66,66,66,.7);
+    padding-right: 5px;
+}

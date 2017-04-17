@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import layoutReducer from '../Containers/Layout/LayoutReducers'
+import layoutReducer from '../Containers/UserList/UserListReducers'
 
 const rootReducer = combineReducers({
     layoutReducer

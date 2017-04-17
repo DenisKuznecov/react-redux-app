@@ -5,7 +5,6 @@ const initialState = {
 };
 
 export default function layoutReducer(state = initialState, action) {
-    debugger;
     switch(action.type) {
         case 'FETCHING_DATA':
             return {
@@ -13,13 +12,12 @@ export default function layoutReducer(state = initialState, action) {
                 isFetching: true
             };
         case 'FETCHING_DATA_SUCCESS':
-            debugger;
             return {
                 ...state,
                 isFetching: false,
                 data: action.payload
             };
-        case 'FETCHING_DATA_FAILURE':
+        case 'FETCHING_DATA_FAIL':
             return {
                 ...state,
                 isFetching: false,
